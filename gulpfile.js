@@ -5,6 +5,8 @@ var gulp = require('gulp'),
 	transform = require('vinyl-transform'),
 	browserify = require('browserify'),
 	compass = require('gulp-compass'),
+	gulpif = require('gulp-if'),
+	uglify = require('gulp-uglify'),
 	connect = require('gulp-connect');
 
 var env, 
@@ -15,7 +17,7 @@ var env,
 	sassStyle;
 
 // --------------------------------------------------------------------------------------
-// set the enviorment and change the way we process based on that
+// set the enviroment and change the way we process based on that
 // --------------------------------------------------------------------------------------
 
 env = "development";
@@ -57,6 +59,7 @@ gulp.task('browserify', function() {
 	return gulp.src(jsSources)
 			.pipe(browserified)
 			.pipe(concat('bundle.js'))
+			.pipe(gulpif(env === 'production', uglify()))
 			.pipe(gulp.dest(outputDir + '/js'));
 });
 
