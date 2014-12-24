@@ -4,7 +4,7 @@ var $;
 $ = require('jquery');
 
 $(function() {
-  return $('.greet').css("color", "blue");
+  return $('.greet').css("color", "red");
 });
 
 },{"jquery":2}],2:[function(require,module,exports){
