@@ -7,9 +7,39 @@ var gulp = require('gulp'),
 	compass = require('gulp-compass'),
 	connect = require('gulp-connect');
 
-var coffeeSources = ['components/coffee/*.coffee'];
-var jsSources = ['components/scripts/*.js'];
-var sassSources = ['components/sass/styles.scss'];
+var env, 
+	coffeeSources, 
+	jsSources, 
+	sassSources,
+	outputDir,
+	sassStyle;
+
+// --------------------------------------------------------------------------------------
+// set the enviorment and change the way we process based on that
+// --------------------------------------------------------------------------------------
+
+env = "development";
+// env = "production";
+
+if (env === "development") {
+	outputDir = "builds/development";
+	sassStyle = "expanded";
+} else {
+	outputDir = "builds/production";
+	sassStyle = "compressed";
+}
+
+// --------------------------------------------------------------------------------------
+// code sources
+// --------------------------------------------------------------------------------------
+
+coffeeSources = ['components/coffee/*.coffee'];
+jsSources = ['components/scripts/*.js'];
+sassSources = ['components/sass/styles.scss'];
+
+// --------------------------------------------------------------------------------------
+// gulp tasks
+// --------------------------------------------------------------------------------------
 
 gulp.task('coffee', function() {
 	gulp.src(coffeeSources)
@@ -27,19 +57,19 @@ gulp.task('browserify', function() {
 	return gulp.src(jsSources)
 			.pipe(browserified)
 			.pipe(concat('bundle.js'))
-			.pipe(gulp.dest('builds/development/js'));
+			.pipe(gulp.dest(outputDir + '/js'));
 });
 
 gulp.task('compass', function() {
 	gulp.src(sassSources)
 		.pipe(compass({
 			sass: 'components/sass',
-			image: 'builds/development/images',
-			style: 'expanded',
+			image: outputDir + '/images',
+			style: sassStyle,
 			require: ['susy', 'breakpoint']
 		})
 			.on('error', gutil.log))
-		.pipe(gulp.dest('builds/development/css'));
+		.pipe(gulp.dest(outputDir + '/css'));
 });
 
 gulp.task('watch', function() {
@@ -50,7 +80,7 @@ gulp.task('watch', function() {
 
 gulp.task('connect', function() {
 	connect.server({
-		root: 'builds/development/',
+		root: outputDir + '/',
 		livereload: false
 	});
 });
