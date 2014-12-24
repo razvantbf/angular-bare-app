@@ -1,4 +1,4 @@
 $ = require('jquery')
 
 $ ->
-	$('.greet').css("color", "red");
+	$('.helloworld').css("color", "red");

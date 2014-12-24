@@ -3,5 +3,5 @@ var $;
 $ = require('jquery');
 
 $(function() {
-  return $('.greet').css("color", "red");
+  return $('.helloworld').css("color", "red");
 });
