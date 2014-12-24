@@ -34,7 +34,8 @@ gulp.task('compass', function() {
 		.pipe(compass({
 			sass: 'components/sass',
 			image: 'builds/development/images',
-			style: 'expanded'
+			style: 'expanded',
+			require: ['susy', 'breakpoint']
 		})
 			.on('error', gutil.log))
 		.pipe(gulp.dest("builds/development/css"))
