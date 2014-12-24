@@ -1,0 +1,10 @@
+{
+  "name": "onegoal",
+  "version": "0.0.1",
+  "description": "Find the most important goal from you goal list",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Razvan Cazanescu"
+}
