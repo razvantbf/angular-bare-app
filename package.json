@@ -1,10 +1,10 @@
 {
-  "name": "webapp",
+  "name": "onegoal",
   "version": "0.0.1",
-  "description": "Scaffold an web app with gulp, browserify, coffee and sass",
+  "description": "Find out your most important goal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/razvantbf/WebApp.git"
+    "url": "https://github.com/razvantbf/OneGoal.git"
   },
   "author": "Razvan Cazanescu",
   "devDependencies": {
