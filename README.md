@@ -5,7 +5,7 @@ This template is for scaffolding an web app.
 ## Contains
 
 - Sass and Coffee processed with Gulp
-- Gup web server starts at default gulp task (does not contain auto-reloading because gulp-connect has some issues)
+- Gulp web server starts at default gulp task (does not contain auto-reloading because gulp-connect has some issues)
 - 2 Enviorments - Development and Production (to change them just uncomment the env variable from the gulpfile.js)
 - Browserify with vinyl transform
 
