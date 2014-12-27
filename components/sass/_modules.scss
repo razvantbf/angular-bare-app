@@ -1,0 +1,14 @@
+.authorlist {
+	width: 40rem;
+	margin: 0 auto;
+	li {
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px dashed black;
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+}

@@ -1,5 +1,27 @@
-{
-	"sex" : "mult",
-	"cap" : "mare",
-	"putza" : "mica"
-}
+[
+	{
+		"name" : "Razvan Cazanescu",
+		"title" : "Genius",
+		"company" : "The Basic Fundamentals"
+	},
+	{
+		"name" : "Dan Luca",
+		"title" : "Coach",
+		"company" : "5AM Coaching"
+	},
+	{
+		"name" : "Cristian Panaite",
+		"title" : "Doctor",
+		"company" : "KiloStop"
+	},
+	{
+		"name" : "Andreea Cazanescu",
+		"title" : "Artist",
+		"company" : "HaHaHeart"
+	},
+	{
+		"name" : "Alin Matei",
+		"title" : "Designer",
+		"company" : "GreenAlan"
+	}
+]

@@ -1,7 +1,16 @@
-body, p {
+
+
+html, body {
 	font-family: $bodyFont;
+	font-size: 62.5%;
 }
 
 #{headings()} {
 	font-family: $headFont;
+	font-weight: bold;
+	font-size: 3rem;
+}
+
+p {
+	font-size: 1.8rem;
 }
