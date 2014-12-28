@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="OneGoal">
+<html lang="en" ng-app="oneGoal">
 <head>
 	<meta charset="UTF-8">
 	<title>One Goal</title>
@@ -9,13 +9,8 @@
 <body>
 
 	<div class="layout">
-		<div ng-controller="MyController">
-			<ul class="authorlist">
-				<li ng-repeat="item in authors">
-					<h2>{{item.name}}</h2>
-					<p>{{item.title}}, {{item.company}}</p>
-				</li>
-			</ul>
+		<div ng-view>
+			
 		</div>
 	</div>
 

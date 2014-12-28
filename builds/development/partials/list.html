@@ -1,0 +1,13 @@
+<section class="authors">
+	<div class="search">
+		<input ng-model="query" type="text" placeholder="search for authors" autofocus>
+	</div>
+	<div ng-controller="ListController">
+		<ul class="authorlist">
+			<li ng-repeat="item in authors | filter: query">
+				<h2>{{item.name}}</h2>
+				<p>{{item.title}}, {{item.company}}</p>
+			</li>
+		</ul>
+	</div>
+</section>

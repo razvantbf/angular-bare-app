@@ -55,6 +55,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 html, body {
   font-family: "Open Sans", sans-serif;
   font-size: 62.5%;
@@ -66,17 +72,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
 }
 
-p {
+p, input, button, label, textarea, span {
   font-size: 1.8rem;
 }
 
+small {
+  font-size: 1.4rem;
+}
+
 .layout {
-  max-width: 100rem;
-  margin: 3rem auto;
+  max-width: 40rem;
+  margin: 10rem auto 0;
 }
 
 .authorlist {
-  width: 40rem;
+  width: 100%;
   margin: 0 auto;
 }
 .authorlist li {
@@ -88,4 +98,38 @@ p {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+.search input {
+  width: 100%;
+  margin-bottom: 3rem;
+  line-height: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 0;
+  background: #999999;
+  color: white;
+}
+.search input:-moz-placeholder {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+}
+.search input::-moz-placeholder {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+}
+.search input:-ms-input-placeholder {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+}
+.search input::-webkit-input-placeholder {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
+}
+.search input:focus {
+  outline: none;
 }

@@ -1,5 +1,5 @@
 .authorlist {
-	width: 40rem;
+	width: 100%;
 	margin: 0 auto;
 	li {
 		margin-bottom: 1rem;
@@ -9,6 +9,27 @@
 			margin-bottom: 0;
 			padding-bottom: 0;
 			border-bottom: 0;
+		}
+	}
+}
+
+.search {
+	input {
+		width: 100%;
+		margin-bottom: 3rem;
+		line-height: 5rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		border: 0;
+		background: lighten(black, 60%);
+		color: white;
+		@include input-placeholder {
+			color: white;
+			font-family: $headFont;
+			font-weight: 200;
+		}
+		&:focus {
+			outline: none;
 		}
 	}
 }

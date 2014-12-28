@@ -1,8 +1,10 @@
-require 'angular'
 
-OneGoal = angular.module 'OneGoal', []
+authorControllers = angular.module 'authorControllers', 
+	[
 
-OneGoal.controller 'MyController', 
+	]
+
+authorControllers.controller 'ListController',
 	[
 		'$scope'
 		'$http'

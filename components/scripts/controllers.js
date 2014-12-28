@@ -1,10 +1,8 @@
-var OneGoal;
+var authorControllers;
 
-require('angular');
+authorControllers = angular.module('authorControllers', []);
 
-OneGoal = angular.module('OneGoal', []);
-
-OneGoal.controller('MyController', [
+authorControllers.controller('ListController', [
   '$scope', '$http', function($scope, $http) {
     return $http.get('json/data.json').success(function(data) {
       return $scope.authors = data;
