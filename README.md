@@ -1,3 +1,3 @@
-# One Goal App
+# A simple AngularJS App
 
-Find out your most important goal!
+Nothing too amazing. Just a simple AngularJS App for practice
