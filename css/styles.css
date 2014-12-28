@@ -55,6 +55,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+.authorlist li {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.authorlist li.ng-enter.ng-enter-active, .authorlist li.ng-leave {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.authorlist li.ng-leave.ng-leave-active, .authorlist li.ng-enter {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -72,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
 }
 
-p, input, button, label, textarea, span {
+ul li, a, p, input, button, label, textarea, span {
   font-size: 1.8rem;
 }
 
@@ -132,4 +161,10 @@ small {
 }
 .search input:focus {
   outline: none;
+}
+
+.back {
+  display: block;
+  margin-top: 3rem;
+  font-size: 1.4rem;
 }
