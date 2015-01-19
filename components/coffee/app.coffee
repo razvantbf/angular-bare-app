@@ -1,25 +1,22 @@
-
-require 'angular'
-require 'angular-route'
-require 'angular-animate'
-
-oneGoal = angular.module 'oneGoal',
+app = angular.module 'app',
 	[
 		'ngRoute'
-		'authorControllers'
+		'ngAnimate'
+		'ngCookies'
+		'ngTouch'
 	]
 
-oneGoal.config(
+app.config(
 		[
 			'$routeProvider'
 			($routeProvider) ->
-				$routeProvider.when '/list',
-						templateUrl: 'partials/list.html'
-						controller: 'ListController'
-				$routeProvider.when '/details/:itemId',
-						templateUrl: 'partials/details.html'
-						controller: 'DetailsController'
+				$routeProvider.when '/',
+						templateUrl: 'partials/default.html'
+						controller: 'DefaultController'
+				$routeProvider.when '/pageone',
+						templateUrl: 'partials/pageone.html'
+						controller: 'PageOneController'
 				$routeProvider.otherwise
-						redirectTo: '/list'
+						redirectTo: '/'
 		])
 

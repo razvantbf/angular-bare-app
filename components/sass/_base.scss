@@ -1,5 +1,9 @@
 @include border-box-sizing;
 
+* {
+	-webkit-text-size-adjust: none;
+}
+
 html, body {
 	font-family: $bodyFont;
 	font-size: 62.5%;
@@ -17,4 +21,15 @@ ul li, a, p, input, button, label, textarea, span {
 
 small {
 	font-size: 1.4rem;
+}
+
+input, button, textarea, select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	&:focus {
+		outline: none;
+	}
+	@include border-radius(0);
+	-webkit-text-size-adjust: none;
 }

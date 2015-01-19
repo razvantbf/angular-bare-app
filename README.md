@@ -1,3 +1,3 @@
-# A simple AngularJS App
+# KiloStop Quiz
 
-Nothing too amazing. Just a simple AngularJS App for practice
+KiloStop Quiz App
