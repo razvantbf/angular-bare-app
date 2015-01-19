@@ -1,9 +1,3 @@
-@include border-box-sizing;
-
-* {
-	-webkit-text-size-adjust: none;
-}
-
 html, body {
 	font-family: $bodyFont;
 	font-size: 62.5%;
@@ -13,23 +7,4 @@ html, body {
 	font-family: $headFont;
 	font-weight: bold;
 	font-size: 3rem;
-}
-
-ul li, a, p, input, button, label, textarea, span {
-	font-size: 1.8rem;
-}
-
-small {
-	font-size: 1.4rem;
-}
-
-input, button, textarea, select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	&:focus {
-		outline: none;
-	}
-	@include border-radius(0);
-	-webkit-text-size-adjust: none;
 }

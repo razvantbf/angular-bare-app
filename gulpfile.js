@@ -4,12 +4,11 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	compass = require('gulp-compass'),
 	uglify = require('gulp-uglify'),
-	minifyhtml = require('gulp-minify-html'),
 	connect = require('gulp-connect');
 
 var coffeeSources, 
 	jsSources, 
-	sassSources.
+	sassSources,
 	htmlSources;
 
 // --------------------------------------------------------------------------------------
@@ -61,9 +60,9 @@ gulp.task('watch', function() {
 
 gulp.task('connect', function() {
 	connect.server({
-		root: outputDir + '/',
+		root: 'build/',
 		livereload: false
 	});
 });
 
-gulp.task('default', ['coffee', 'javascript', 'compass', 'html', 'connect', 'watch']);
+gulp.task('default', ['coffee', 'javascript', 'compass', 'connect', 'watch']);
